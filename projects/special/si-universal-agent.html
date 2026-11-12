@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>SI-Universal-Agent · Special Projects · Christopher Hamm</title>
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300" rel="stylesheet">
+<link rel="stylesheet" href="/projects/projects.css">
+</head>
+<body>
+<div class="wrap">
+	<header class="masthead">
+		<p class="crumbs"><a href="/">christopherhamm.com</a><span>/</span><a href="/projects/">projects</a><span>/</span><a href="/projects/special/">special</a><span>/</span>si-universal-agent</p>
+		<h1>SI-Universal-Agent</h1>
+		<p class="tagline">A super-intelligent agent anyone can direct, held inside a harness that keeps it predictable.</p>
+		<div class="meta">
+			<span><span class="badge">Discussion</span></span>
+			<span>Opened 11 Nov 2026</span>
+			<span>Owner: Christopher Hamm</span>
+			<span>Artifacts: 9 UI screenshots from the harness prototype</span>
+		</div>
+	</header>
+
+	<p class="notice">Unlisted working page. Positions here are drafts to argue with, not decisions.</p>
+
+	<main>
+		<section>
+			<h2>The idea in one paragraph</h2>
+			<p class="lede">An everyday person in Sales, Finance, HR, or Support types what they want done and how often. They never see a prompt, a model picker, or a workflow editor. The harness matches the request to a workflow someone has already built and published, fills in the few settings that user is allowed to touch, locks the rest, and shows the plan before anything runs. Agents with named personas do the work stage by stage. A human approval gate pauses the run before anything leaves the building. Every run is visible, logged, and repeatable.</p>
+			<p>"Super intelligent" is deliberately not the interesting part. The models will keep getting smarter on their own. The part worth designing is the <b>harness</b>: the structure that turns raw capability into something an ordinary team can trust on a Monday morning.</p>
+		</section>
+
+		<section>
+			<h2>What the prototype shows</h2>
+			<p>The screenshots below are from the harness UI prototype. The first three are the product views: creating an agent, building a workflow, and watching runs. The remaining six are a simulator that walks through one Sales job end to end, then switches to a Support job to show the same harness handling a different functional area.</p>
+
+			<h3>Product views</h3>
+			<div class="gallery">
+				<figure>
+					<a href="/projects/special/img/01-new-agent.png"><img src="/projects/special/img/01-new-agent.png" alt="New agent screen: a plain-language description on the left, a generated setup on the right, and the five workflow stages along the bottom" loading="lazy"></a>
+					<figcaption><b>1. New agent.</b> The user describes the job in plain words. The harness matches it to a published workflow (96% fit), names the agent, and lays out helpers, inputs, schedule, output, and guardrails. The footnote is the whole philosophy: "You never edit a workflow here."</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/02-workflow-builder.png"><img src="/projects/special/img/02-workflow-builder.png" alt="Workflow builder: personas on the left, five stage columns with step cards in the middle, reusable processes on the right" loading="lazy"></a>
+					<figcaption><b>2. Workflow builder.</b> The harness team's view. Personas (System, Researcher, Copywriter, QA Checker, Reviewer) are assigned to step cards inside stages. Processes are reusable blocks dragged into stages. The two boxes at the bottom matter most: typed handoffs between stages, and the short list of what everyday users may change.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/03-runs-monitoring.png"><img src="/projects/special/img/03-runs-monitoring.png" alt="Runs screen: recent runs table, monthly counts, and a run detail panel paused at the Review stage with 14 drafts waiting" loading="lazy"></a>
+					<figcaption><b>3. Runs.</b> Monitoring for the user, not the engineer. The run is paused at Review with 14 drafts waiting. Each stage shows who did it, how long it took, and what came out. Actions are pause, re-run from a stage, or change setup. The timestamped log is the audit trail.</figcaption>
+				</figure>
+			</div>
+
+			<h3>Simulator walkthrough</h3>
+			<div class="gallery">
+				<figure>
+					<a href="/projects/special/img/04-simulator-describe.png"><img src="/projects/special/img/04-simulator-describe.png" alt="Simulator step 1, Describe: the Sales lead outreach prompt with a side panel explaining what the harness does with it" loading="lazy"></a>
+					<figcaption><b>4. Describe.</b> Four functional areas across the top, four steps across the stepper. The side panel spells out the harness's job: read the prompt for job, cadence, and rules; match a published workflow; fill the allowed settings and lock the rest; show the setup before anything runs.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/05-simulator-setup.png"><img src="/projects/special/img/05-simulator-setup.png" alt="Simulator step 2, Review setup: each setting marked either locked or yours" loading="lazy"></a>
+					<figcaption><b>5. Review setup.</b> Every setting is tagged <i>locked</i> or <i>yours</i>. Workflow, personas, and the approval guardrail are locked. Input, schedule, and voice are the user's. This is the permission model made visible.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/06-simulator-workflow.png"><img src="/projects/special/img/06-simulator-workflow.png" alt="Simulator step 3, Workflow: five stage columns, each with one card linking a process to a persona" loading="lazy"></a>
+					<figcaption><b>6. Workflow.</b> The read-only view of what the harness team built. One card per stage links a process to a persona, with typed inputs and outputs. The Review stage carries the approval gate.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/07-simulator-run-gate.png"><img src="/projects/special/img/07-simulator-run-gate.png" alt="Simulator step 4, Run in progress: leads moving through Kanban-style stage columns, paused with 5 leads waiting for the owner" loading="lazy"></a>
+					<figcaption><b>7. Run, at the gate.</b> Leads flow left to right through the stages like a Kanban board. The run pauses with five leads waiting on the owner. "Approve unflagged, skip flagged" is the fast path; "Approve all" is the blunt one. Model calls and human decisions are counted side by side.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/08-simulator-run-complete.png"><img src="/projects/special/img/08-simulator-run-complete.png" alt="Simulator step 4, Run complete: 12 delivered, 2 skipped by the reviewer, full live log" loading="lazy"></a>
+					<figcaption><b>8. Run complete.</b> Twelve delivered, two skipped by the reviewer (the ones QA flagged for pricing language), 56 model calls, 14 human decisions. The log reads as a story a non-engineer could follow.</figcaption>
+				</figure>
+				<figure>
+					<a href="/projects/special/img/09-simulator-support-run.png"><img src="/projects/special/img/09-simulator-support-run.png" alt="Simulator running the Support ticket triage workflow with different stages and personas" loading="lazy"></a>
+					<figcaption><b>9. Same harness, different area.</b> Support ticket triage: Ingest, Classify, Draft reply, Lead review, Send and close. Different personas (Triager, Responder, Support lead), same shape, same gate. This is the "universal" claim in one picture.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section>
+			<h2>Principles the prototype already commits to</h2>
+			<ul>
+				<li><b>Plain words in, no settings.</b> The everyday user's whole interface is a text box and a review screen.</li>
+				<li><b>Two roles, two tools.</b> Everyday users pick jobs. The harness team builds and publishes workflows. Neither sees the other's controls.</li>
+				<li><b>Locked versus yours.</b> Every setting declares who may change it. The approval guardrail cannot be turned off by the user.</li>
+				<li><b>Personas, not prompts.</b> Work is assigned to a named role with a model tier and a toolset, so the same persona behaves the same way across workflows.</li>
+				<li><b>Typed handoffs.</b> Stages pass declared outputs (leads[], company_summary, draft_email, approved_drafts[]). Nothing is passed by vibe.</li>
+				<li><b>A gate before the world.</b> Nothing is sent, posted, or written back until a person decides.</li>
+				<li><b>Runs are first-class.</b> Every run has a log, a stage timeline, counts of model calls and human decisions, and a re-run-from-here button.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>How this fits a static GitHub Pages site</h2>
+			<p>This site is static files served by GitHub Pages from a public repository. There is no server, no database, no secrets store, and no way to run code on request. That rules some things out and makes others surprisingly natural.</p>
+			<div class="facts">
+				<div>
+					<h3>Can live here</h3>
+					<ul>
+						<li><b>The simulator.</b> Screens 4 to 9 are client-side with simulated data. They could ship as plain HTML and JavaScript in this folder, no backend needed.</li>
+						<li><b>Published workflow definitions.</b> Stages, personas, processes, and handoffs as JSON or Markdown files, versioned by git.</li>
+						<li><b>Design artifacts and this discussion.</b> Screenshots, briefs, decision log.</li>
+						<li><b>Read-only run reports.</b> A runtime elsewhere could commit a run log as a static page after the fact.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Cannot live here</h3>
+					<ul>
+						<li><b>Real runs.</b> Model calls, CRM lookups, and email need a runtime with credentials.</li>
+						<li><b>Schedules.</b> "Mondays at 7:00 AM" needs something that wakes up.</li>
+						<li><b>Private data.</b> Anything committed is public, even on an unlisted page.</li>
+						<li><b>The approval gate itself.</b> A decision has to be recorded somewhere that can act on it.</li>
+					</ul>
+				</div>
+			</div>
+			<h3>A plausible split</h3>
+			<p>The site is the <b>publishing surface and the spec</b>. Workflow definitions, persona definitions, and the simulator live here, in the open, as the thing people can read and try. The <b>runtime</b> lives somewhere else: a local agent session on a laptop for one person, GitHub Actions on a schedule for a small team, or a hosted service for anything real. The runtime reads the published definitions from this repo and writes nothing back except, optionally, a run report as a pull request.</p>
+			<div class="callout">
+				<p>That split is itself a harness principle. The published workflow is a git-versioned artifact with a review step. "Publish v4" in the builder could literally be a merged pull request.</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Things to argue about</h2>
+			<ul>
+				<li><b>The fit score.</b> The prototype matches a job to a workflow at 96% fit. What happens at 70%? Does the harness refuse, ask a clarifying question, or pick the nearest workflow and say so? The honest answer for an everyday user is probably "ask one question, then show the plan."</li>
+				<li><b>Approval fatigue.</b> Fourteen drafts waiting on Monday morning is fine once. Fourteen every Monday across four agents becomes rubber-stamping, and a gate that is always approved is not a gate. "Approve unflagged, skip flagged" is the right instinct; the QA persona is what makes it safe.</li>
+				<li><b>The harness team as bottleneck.</b> Everyday users cannot edit workflows by design. That means the harness team's backlog is the ceiling on what the organization can automate. The Processes library (reusable steps) is the pressure valve, but someone still has to assemble them.</li>
+				<li><b>Cost visibility.</b> Fifty-six model calls for fourteen leads. The counter is shown, but not the dollars, and not the trend. Runs probably need a budget the same way they have a schedule.</li>
+				<li><b>"Super intelligent" versus "well harnessed."</b> Most of the value in the screenshots comes from structure, not model quality. A smarter model inside the same harness makes each persona better; it does not change the shape. Is the SI prefix a goal, a marketing word, or a warning label?</li>
+				<li><b>What the agent remembers.</b> Nothing in the prototype shows memory across runs. Does the Researcher persona learn that a company was already contacted in March? That is the CRM's job today, but a universal agent will be asked to remember things the CRM does not hold.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Open questions</h2>
+			<ol>
+				<li>Who is the first real user: a single person automating their own week, or a team with a harness owner?</li>
+				<li>Should the simulator be built out here as a working static demo, and if so, is it a teaching tool or a sales tool?</li>
+				<li>What is the minimum workflow definition format that both the builder UI and a runtime could read? JSON, YAML, or Markdown with front matter?</li>
+				<li>Where does the approval gate's decision get recorded so that the runtime can act on it without the site having a backend?</li>
+				<li>What does a persona definition contain beyond a name, a model tier, and a toolset? Voice sample, constraints, examples, evaluation set?</li>
+				<li>How does a workflow version get retired when twelve agents depend on it?</li>
+				<li>What is the failure story? The Runs screen has a "Needs a fix" count of one. What did the user see, and what could they do about it without the harness team?</li>
+				<li>Does any of this need a server at all for the single-user case, or is a local agent session plus this repository enough?</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discussion log</h2>
+			<article class="entry">
+				<header><b>Entry 1 · 11 Nov 2026</b><span>Setup and first read of the prototype</span></header>
+				<p>Created this space and loaded the nine screenshots from the harness UI prototype. First read: the strongest idea is the split between everyday users and the harness team, enforced by the locked/yours tagging on every setting. The second strongest is the simulator, which explains the whole model better than any document could and could ship on this static site as-is.</p>
+				<p>The weakest spot is memory and failure handling. Neither appears in the UI yet, and both are where a "universal" agent will be judged after the first month.</p>
+				<p>Proposed next step: answer open questions 1 and 2 first, since they decide whether the next artifact is a working simulator in this folder or a workflow definition format.</p>
+			</article>
+			<article class="entry next">
+				<header><b>Entry 2 · date</b><span>Next session</span></header>
+				<p>Append the next discussion here. Keep earlier entries unchanged.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<span>Christopher Hamm · unlisted · last updated 11 Nov 2026</span>
+		<a href="/projects/special/">Special Projects</a>
+	</footer>
+</div>
+</body>
+</html>
